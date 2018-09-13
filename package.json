@@ -21,6 +21,10 @@
     "threads",
     "web workers"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/granmoe/twizzlers.git"
+  },
   "author": "Matt Granmoe",
   "license": "ISC"
 }
