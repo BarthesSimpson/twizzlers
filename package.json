@@ -1,0 +1,26 @@
+{
+  "name": "twizzlers",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "all"
+  },
+  "keywords": [
+    "isomorphic",
+    "javascript",
+    "node",
+    "multithreading",
+    "parallel",
+    "parallelization",
+    "threads",
+    "web workers"
+  ],
+  "author": "Matt Granmoe",
+  "license": "ISC"
+}
