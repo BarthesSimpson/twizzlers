@@ -17,14 +17,13 @@ import doStuff from "somewhere";
 const foo = (bar, baz) => doStuff(foo, bar);
 
 // some other place in your codebase
-import { twizzlifyThatShit } from "twizzlers";
+import { twizzlify } from "twizzlers";
 import foo from "wherever/foo/is";
 
-const twizzledFunc = twizzlifyThatShit(foo);
+const twizzledFunc = twizzlify(foo);
 
 // BOOM! This just ran on every CPU core
 // Thread pool pattern will also be available
 const whoaThatWasFast = twizzledFunc(123, {});
 
-// Why the fuck is vs code formatting this snippet? Anyone know how to turn that off?
 ```
