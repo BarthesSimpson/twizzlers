@@ -10,18 +10,19 @@ export function twizzlify(
   return (...args) => {}
 }
 
-export function inferParitionFunc(...args) {
+export function inferPartitionFunc(...args) {
   const input = args[0]
-  if (typeof input == Array) {
-    const partitionSize = Math.floor(input.length / cpuCount)
+  if (Array.isArray(input)) {
+    const partitionSize = Math.ceil(input.length / cpuCount)
     const partitions = []
     let index = 0
-    let lastIndex = input.length - 1
+    let lastIndex = input.length
     while (index < lastIndex) {
       partitions.push(
-        input.slice(index, Math.min(index + partitionSize, lastIndex))
+        input.slice(index, Math.min(index + partitionSize, lastIndex)),
       )
       index += partitionSize
     }
+    return partitions
   }
 }
