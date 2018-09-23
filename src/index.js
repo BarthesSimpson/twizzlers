@@ -1,1 +1,5 @@
-import { twizzlify as twizzlifyNode } from 'node_twizzlify'
+const TwizzlifyNode = require('./node')
+const TwizzlifyBrowser = require('./browser')
+
+module.exports =
+  typeof Worker === 'undefined' ? TwizzlifyNode : TwizzlifyBrowser

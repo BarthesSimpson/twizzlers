@@ -1,4 +1,4 @@
-import { inferPartitionFunc } from 'node_twizzlify'
+const { inferPartitionFunc } = require('partition')
 
 jest.resetModules()
 jest.mock('os', () => ({
@@ -17,6 +17,11 @@ describe('inferPartitionFunc tests', () => {
   })
   it('Correctly partitions an array that is not a multiple of the number of CPU cores', () => {
     const inputArray = [1, 2, 3, 4, 5, 6, 7]
-    expect(inferPartitionFunc(inputArray)).toEqual([[1, 2], [3, 4], [5, 6], [7]])
+    expect(inferPartitionFunc(inputArray)).toEqual([
+      [1, 2],
+      [3, 4],
+      [5, 6],
+      [7],
+    ])
   })
 })
