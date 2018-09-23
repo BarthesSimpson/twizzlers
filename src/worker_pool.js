@@ -1,4 +1,6 @@
 const os = require('os')
+const serialize = require('serialize-javascript')
+
 const cpuCount = os.cpus().length
 
 class WorkerPool {
@@ -25,6 +27,7 @@ class WorkerPool {
         worker.postMessage({ func: func.toString(), partition })
         return new Promise(resolve => {
           worker.on('message', ({ result }) => {
+            console.log(result)
             resolve(result)
           })
         })

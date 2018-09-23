@@ -33,28 +33,6 @@ class Twizzlify {
       return this.workerPool.exec(this.func, partitions, this.collectFunc)
     }
   }
-  // partition = func => {
-  //   this.partitionFunc = func
-  // }
-
-  // collect = func => {
-  //   this.collectFunc = func
-  // }
-
-  // partitionSum = () => {
-  //   this.partitionSum = sum
-  // }
-
-  // collectSum = () => {
-  //   this.collectFunc = sum
-  // }
-
-  // done = () => {
-  //   return (...args) => {
-  //     partitions = this.partitionFunc(...args)
-  //     return this.workerPool.exec((this.func, partitions, this.collectFunc))
-  //   }
-  // }
 }
 
 module.exports = Twizzlify
